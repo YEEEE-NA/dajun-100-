@@ -1,0 +1,234 @@
+/*@font-face {*/
+/*    font-family: NanumPen;*/
+/*    src: url('../fonts/korean/NanumPenScript-Regular.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: YeonSung;*/
+/*    src: url('../fonts/korean/YeonSung-Regular.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: PoorStory;*/
+/*    src: url('../fonts/korean/PoorStory-Regular.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: HiMelody;*/
+/*    src: url('../fonts/korean/HiMelody-Regular.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: Dongle;*/
+/*    src: url('../fonts/korean/Dongle-Regular.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: Skybori;*/
+/*    src: url('../fonts/korean/SKYBORI.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: CafeM;*/
+/*    src: url('../fonts/korean/Cafe24Moyamoya-Face-v1.0.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: CafeS;*/
+/*    src: url('../fonts/korean/Cafe24Supermagic-Regular-v1.0.ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*    font-family: Kyobo;*/
+/*    src: url('../fonts/korean/Kyobo.ttf');*/
+/*}*/
+
+@font-face {
+    font-family: CookieRun;
+    src: url('../fonts/korean/CookieRun.ttf');
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+
+/*제목 */
+.section-title-hr {
+    width: 175px;
+    height: 1px;
+    border: 1px solid #A9DFBF;
+    background-color: #A9DFBF;
+    display: block;
+}
+.white-hr {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+
+
+/*배경*/
+p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+blockquote {
+    position: relative;
+    padding-left: 1.5rem;
+    /*font-size: 2rem;*/
+    line-height: 1.25;
+    letter-spacing: -0.05rem;
+}
+blockquote:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background-color: #A9DFBF;
+    border-radius: 60px;
+}
+
+figure {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.hero:nth-child(1) figure {
+    background-image: url("../images/headline/0.jpeg");
+    background-position: center;
+}
+.hero:nth-child(2) figure {
+    background-image: url("../images/headline/1.jpeg");
+    background-position: center;
+}
+.hero:nth-child(3) figure {
+    background-image: url("../images/headline/2.jpeg");
+    background-position: center;
+}
+.hero:nth-child(4) figure {
+    background-image: url("../images/headline/3.jpeg");
+    background-position: center;
+}
+.hero:nth-child(5) figure {
+    background-image: url("../images/headline/4.jpg");
+    background-position: center;
+}
+
+.hero-inner {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, auto, auto, 0);
+}
+@supports (-webkit-overflow-scrolling: touch) {
+    .hero-inner {
+        clip: unset;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+.hero__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    padding: 0 1rem;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 9vw;
+    text-shadow: 1px 1px 1px #000;
+    letter-spacing: -0.125rem;
+    text-align: center;
+}
+@media (min-width: 1200px) {
+    .hero__title {
+        font-size: 6rem;
+    }
+}
+
+.content {
+    position: relative;
+    margin: 0 auto 8rem;
+    /*padding: 2rem;*/
+}
+.content:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    z-index: 99;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.content__inner {
+    margin: 0 auto;
+    max-width: 700px;
+}
+.content__inner > * + * {
+    margin-top: 1.5rem;
+}
+.content__inner > blockquote {
+    margin: 3rem 0;
+}
+
+.content__title {
+    font-size: 3rem;
+    line-height: 1.25;
+    letter-spacing: -0.125rem;
+    text-align: center;
+}
+@media (min-width: 600px) {
+    .content__title {
+        font-size: 4rem;
+    }
+}
+
+.content__author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    width: 100%;
+    font-size: 1.5rem;
+    letter-spacing: -0.125rem;
+    text-align: center;
+}
+.content__author:before, .content__author:after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background-color: #A9DFBF;
+}
+.content__author:before {
+    margin-right: 1rem;
+}
+.content__author:after {
+    margin-left: 1rem;
+}
